@@ -30,3 +30,28 @@ function goBack() {
   document.getElementById('episode3').style.display = 'none';
   document.getElementById('episode4').style.display = 'none';
 }
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  
+
+  // レトロテレビが左右に揺れるアニメーション
+  gsap.to(".retro-tv", {
+    rotation: 5,
+    duration: 1,
+    yoyo: true,
+    repeat: -1,
+    ease: "power1.inOut",
+  });
+
+  // 戻るボタンがホバーで拡大するアニメーション
+  document.querySelectorAll(".back-button").forEach((button) => {
+    button.addEventListener("mouseenter", () => {
+      gsap.to(button, { scale: 1.2, duration: 0.2 });
+    });
+    button.addEventListener("mouseleave", () => {
+      gsap.to(button, { scale: 1, duration: 0.2 });
+    });
+  });
+});
+

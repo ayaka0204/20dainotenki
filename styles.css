@@ -1,11 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-image: linear-gradient(45deg, #ffc5d8 25%, transparent 25%, transparent 75%, #ffc5d8 75%, #fce4ec),
-  linear-gradient(-45deg, #ffc5d8 25%, transparent 25%, transparent 75%, #ffc5d8 75%, #ffc5d8);
-background-size: 50px 50px;
+  background-color: #fcefe9; /* 単色の背景 */
 margin: 0;
 padding: 0;
+
 color: #5a5a5a;
     text-align: center;
   font-family: 'Kiwi Maru', serif;
@@ -29,8 +28,8 @@ color: #5a5a5a;
 .retro-tv {
   width: 150px;
   height: 120px;
-  background-color: #fecdfb; /* パステルピンク */
-  border: 5px solid #c2f2ff;
+  background-color: #ffdddd; /* パステルピンク */
+  border: 5px solid #ffdddd;
   border-radius: 10px;
   cursor: pointer;
   position: relative;
@@ -42,7 +41,7 @@ color: #5a5a5a;
 }
 
 .retro-tv .screen {
-  background-color: #c1f5ff;
+  background-color: #c6c6c6;
   width: 90%;
   height: 70%;
   display: flex;
@@ -148,7 +147,7 @@ header h1 {
 
 /* 話者紹介セクションのスタイル */
 .speaker-introduction {
-  background-color: #f9f9f9;
+  background-color: #fce1f4;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -212,3 +211,4 @@ header h1 {
     width: 200px; /* 画面サイズに合わせて幅調整 */
   }
 }
+

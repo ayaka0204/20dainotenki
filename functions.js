@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rotation: 5,
     duration: 1,
     yoyo: true,
-    repeat: -1,
+    repeat: -3,
     ease: "power1.inOut",
   });
 
@@ -54,4 +54,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const flowerContainer = document.querySelector(".falling-flowers");
+
+  function createFlower() {
+    const flower = document.createElement("img");
+    flower.src = "images/151.png"; // 桜の花びら画像を指定
+    flower.classList.add("falling-flower");
+
+    // ランダムにサイズを設定 (30px ～ 50px)
+    const size = Math.random() * 20 + 30;
+    flower.style.width = `${size}px`;
+
+    // 横位置をランダム化
+    const position = Math.random() * window.innerWidth;
+    flower.style.left = `${position}px`;
+
+    // 高さをランダム化して上部にたまらないようにする
+    const startHeight = Math.random() * -200 - 100;
+    flower.style.top = `${startHeight}px`;
+
+    // アニメーションの遅延と速度をランダム化
+    const delay = Math.random() * 2;
+    const duration = Math.random() * 5 + 5;
+
+    flower.style.animationDelay = `${delay}s`;
+    flower.style.animationDuration = `${duration}s`;
+
+    // コンテナに追加
+    flowerContainer.appendChild(flower);
+
+    // アニメーション終了後に花びらを削除
+    setTimeout(() => {
+      flower.remove();
+    }, (duration + delay) * 1000);
+  }
+
+  // 一定間隔で花びらを生成
+  setInterval(createFlower, 300);
+});
+
 

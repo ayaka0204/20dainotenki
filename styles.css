@@ -286,3 +286,14 @@ body {
     width: 200px; /* 画面サイズに合わせて幅調整 */
   }
 }
+body {
+  font-family: "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro", Arial, sans-serif;
+  background-color: #ffdddd;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px; /* 方眼のサイズを調整 (20px四方) */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;

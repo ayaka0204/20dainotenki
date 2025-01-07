@@ -26,9 +26,9 @@ color: #5a5a5a;
 }
 
 .retro-tv {
-  width: 150px;
+  width: 100px;
   height: 120px;
-  background-color: #ffdddd; /* パステルピンク */
+  background-color: #fffff0; /* パステルピンク */
   border: 5px solid #ffdddd;
   border-radius: 10px;
   cursor: pointer;
@@ -52,7 +52,7 @@ color: #5a5a5a;
 
 header h1 {
   font-size: 24px;
-  margin-bottom: 20px;
+  
 }
 
 .phone-frame {
@@ -145,30 +145,105 @@ header h1 {
   margin-bottom: 5px;
 }
 
-/* 話者紹介セクションのスタイル */
-.speaker-introduction {
-  background-color: #fce1f4;
-  padding: 20px;
+/* 全体スタイル */
+body {
+  font-family: "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro", Arial, sans-serif;
+  background-color: #f7e1e1;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* セクションのスタイル */
+.interview-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+/* GIFのスタイル */
+.gif-container img {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* スピーカーのコンテナ */
+.speaker-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #fffff0;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.speaker-introduction h2 {
-  font-size: 22px;
+/* 円形アイコン */
+.speaker-icon .circular-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* テキストのスタイル */
+.speaker-info {
+  text-align: left;
+}
+
+.speaker-info h2 {
+  margin: 0 0 1rem;
+  font-size: 1.8rem;
   color: #333;
-  margin-bottom: 10px;
 }
 
-.speaker-introduction p {
-  font-size: 16px;
+.speaker-info p {
+  margin: 0.5rem 0;
   color: #555;
-  line-height: 1.5;
 }
 
-.speaker-introduction strong {
-  font-weight: bold;
-  color: #333;
+/* 桜の花びらアニメーション */
+.falling-flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
 }
+
+.falling-flowers img {
+  position: absolute;
+  animation: fall linear infinite;
+}
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
 
 /* スマホ用のレスポンシブ調整 */
 @media screen and (max-width: 768px) {
@@ -211,4 +286,3 @@ header h1 {
     width: 200px; /* 画面サイズに合わせて幅調整 */
   }
 }
-
